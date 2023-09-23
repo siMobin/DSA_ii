@@ -1,7 +1,5 @@
 ![MasterHead](https://res.cloudinary.com/practicaldev/image/fetch/s--rjxO02ux--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4qxi1gsnhuey77654qj.png)
 
-
-
 <h1 align=center> Sorting Algorithms Included</h1>
 
 ### Insertion Sort
@@ -10,6 +8,7 @@
 - Iterate through the unsorted part of the array.
 - For each element, compare it to the elements in the sorted subarray and insert it in the correct position.
 - Repeat this process until the entire array is sorted.
+
 ---
 
 ### Selection Sort
@@ -18,6 +17,7 @@
 - Find the smallest (or largest) element in the unsorted subarray.
 - Swap it with the leftmost element in the unsorted subarray, effectively expanding the sorted subarray.
 - Repeat this process until the entire array is sorted.
+
 ---
 
 ### Bubble Sort
@@ -26,6 +26,7 @@
 - Compare adjacent elements and swap them if they are in the wrong order.
 - Continue this process, moving one step to the right each time, until no more swaps are needed in a pass.
 - Repeat the above steps until the entire array is sorted.
+
 ---
 
 ### Merge Sort
@@ -34,6 +35,7 @@
 - Recursively sort each half using the Merge Sort algorithm.
 - Merge the two sorted halves back together to create a single sorted array.
 - Repeat this process until the entire array is sorted.
+
 ---
 
 ### Quick Sort
@@ -45,12 +47,12 @@
 - Repeat this process until the entire array is sorted.
 
 ---
-### Heap Sort
 
+### Heap Sort
 
 Heap Sort is a comparison-based sorting algorithm that leverages a binary heap data structure. It efficiently sorts an array in ascending order by repeatedly extracting the maximum element from a binary heap and placing it at the end of the array.
 
-##### *Steps*
+##### _Steps_
 
 #### 1. Build Max Heap (Heapify)
 
@@ -71,8 +73,8 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 
 - Continue steps 2 until the entire array is sorted in ascending order.
 
-
 ##
+
 ##
 
 <h1 align=center>Searching Algorithms Included</h1>
@@ -86,9 +88,10 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 **Step 3:** Mark the initial node as visited.
 
 **Step 4:** While the queue is not empty:
-   -  Dequeue a node from the front of the queue.
-   -  Explore all unvisited neighboring nodes of the dequeued node.
-   -  Enqueue these neighboring nodes and mark them as visited.
+
+- Dequeue a node from the front of the queue.
+- Explore all unvisited neighboring nodes of the dequeued node.
+- Enqueue these neighboring nodes and mark them as visited.
 
 **Step 5:** Repeat steps 4 until the queue is empty or the target node is found.
 
@@ -103,9 +106,10 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 **Step 3:** Mark the initial node as visited.
 
 **Step 4:** While the stack is not empty:
-   - a. Pop a node from the top of the stack.
-   - b. Explore all unvisited neighboring nodes of the popped node.
-   - c. Push these neighboring nodes onto the stack and mark them as visited.
+
+- Pop a node from the top of the stack.
+- Explore all unvisited neighboring nodes of the popped node.
+- Push these neighboring nodes onto the stack and mark them as visited.
 
 **Step 5:** Repeat steps 4 until the stack is empty or the target node is found.
 
@@ -118,10 +122,11 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 **Step 2:** Initialize a distance array to track the shortest distance to each node. Set the initial node's distance to 0 and all other nodes' distances to infinity.
 
 **Step 3:** While the priority queue is not empty:
-   - a. Dequeue a node from the priority queue.
-   - b. For each unvisited neighbor of the dequeued node:
-      - i. Calculate the potential new distance from the initial node to this neighbor through the dequeued node.
-      - ii. If the new distance is smaller than the current recorded distance to the neighbor, update the distance and enqueue the neighbor with the new distance.
+
+- Dequeue a node from the priority queue.
+- For each unvisited neighbor of the dequeued node:
+  - Calculate the potential new distance from the initial node to this neighbor through the dequeued node.
+  - If the new distance is smaller than the current recorded distance to the neighbor, update the distance and enqueue the neighbor with the new distance.
 
 **Step 4:** Repeat step 3 until the priority queue is empty or the target node is reached.
 
@@ -134,13 +139,13 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 **Step 2:** Initialize a distance array to track the shortest distance to each node. Set the initial node's distance to 0 and all other nodes' distances to infinity.
 
 **Step 3:** While the priority queue is not empty:
-   - Dequeue a node from the priority queue.
-   - For each unvisited neighbor of the dequeued node:
-        - Calculate the potential new distance from the initial node to this neighbor through the dequeued node.
-        - If the new distance is smaller than the current recorded distance to the neighbor, update the distance and enqueue the neighbor with the new distance.
+
+- Dequeue a node from the priority queue.
+- For each unvisited neighbor of the dequeued node:
+  - Calculate the potential new distance from the initial node to this neighbor through the dequeued node.
+  - If the new distance is smaller than the current recorded distance to the neighbor, update the distance and enqueue the neighbor with the new distance.
 
 **Step 4:** Repeat step 3 until the priority queue is empty or the target node is reached.
-
 
 > [!NOTE]  
 > Don't trust my code. I'm learning!
