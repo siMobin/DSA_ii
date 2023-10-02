@@ -147,5 +147,50 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 
 **Step 4:** Repeat step 3 until the priority queue is empty or the target node is reached.
 
+---
+
+### Prim's algorithm (Find minimum spanning tree)
+
+1. **Initialization:**
+
+   - Create an empty set to keep track of the vertices included in the Minimum Spanning Tree (MST).
+
+2. **Choose a Starting Vertex:**
+
+   - Select an arbitrary vertex as the starting point and add it to the MST set.
+
+3. **Initialize a Priority Queue:**
+
+   - Create a priority queue (min-heap) to store edges along with their weights. Initially, it contains all edges connected to the chosen vertex.
+
+4. **Main Loop:**
+
+   - Repeat the following steps until the MST set includes all vertices:
+
+   a. **Remove Ineligible Edges:**
+
+   - For each edge (u, v) with weight w in the priority queue:
+     - If one end vertex (u) is in the MST set and the other end vertex (v) is not, remove this edge from the priority queue.
+
+   b. **Choose Minimum Weight Edge:**
+
+   - Select the edge with the minimum weight from the priority queue. This edge will be added to the MST.
+
+   c. **Add Vertex to MST Set:**
+
+   - Add the chosen vertex (v) from the selected edge to the MST set.
+
+5. **Completion:**
+
+   - Continue the above steps until all vertices are included in the MST set, forming the minimum spanning tree.
+
+6. **Result:**
+   - The MST set now contains all vertices and a subset of the original graph's edges, forming the Minimum Spanning Tree.
+
+> [!IMPORTANT]  
+> The choice of the starting vertex can affect the resulting MST, but the overall structure of the tree and its weight will be the same. Prim's algorithm guarantees a minimum spanning tree with the minimum total edge weight.
+
+---
+
 > [!NOTE]  
 > Don't trust my code. I'm learning!
