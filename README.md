@@ -192,5 +192,36 @@ Heap Sort is a comparison-based sorting algorithm that leverages a binary heap d
 
 ---
 
+### Bellman-Ford Algorithm Explanation
+
+The Bellman-Ford algorithm is a widely used algorithm in graph theory and computer science for finding the shortest path from a single source vertex to all other vertices in a weighted, directed graph. It can handle graphs with negative weight edges and detect negative weight cycles. The algorithm was named after its inventors, Richard Bellman and Lester Ford, who independently developed it.
+
+#### **_Algorithm Overview_**
+
+1. **Initialization:**
+
+   - Create an array to store the minimum distance from the source vertex to each vertex in the graph.
+   - Initialize the distance to the source vertex as 0 and the distance to all other vertices as infinity.
+   - Set the predecessor of all vertices to be undefined initially.
+
+2. **Relaxation:**
+
+   - Repeat the following process for the number of vertices in the graph minus one times (|V| - 1 times), where |V| is the number of vertices:
+     - For each edge (u, v) in the graph, where u is the source vertex and v is the destination vertex:
+       - Relax the edge by updating the distance to v if a shorter path from the source vertex to v through u is found:
+         - If `distance[u] + weight(u, v) < distance[v]`, update `distance[v]` to `distance[u] + weight(u, v)`.
+         - Also, set the predecessor of v to be u, indicating that the shortest path from the source to v goes through u.
+
+3. **Detection of Negative Cycles:**
+
+   - After |V| - 1 iterations, if there are still updates occurring during the relaxation step, it indicates the presence of a negative weight cycle in the graph. This is because in a graph with no negative weight cycles, the shortest path cannot have more than |V| - 1 edges.
+
+4. **Shortest Path Retrieval:**
+   - If there are no negative weight cycles detected, you can retrieve the shortest paths from the source vertex to all other vertices by backtracking from the destination vertex to the source using the predecessor information.
+
+The Bellman-Ford algorithm is less efficient than some other shortest path algorithms, such as Dijkstra's algorithm or the Floyd-Warshall algorithm, but it has the advantage of being able to handle graphs with negative weight edges and detecting negative weight cycles. It's commonly used in scenarios where these features are required or when the graph is sparse, and Dijkstra's algorithm is less efficient.
+
+---
+
 > [!NOTE]  
 > Don't trust my code. I'm learning!
