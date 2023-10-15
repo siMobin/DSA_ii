@@ -25,15 +25,18 @@ void floydWarshall(vector<vector<int>>& dist, vector<string>& vertexNames)
 
 int main()
 {
-    vector<string> vertexNames = {"A", "B", "C", "D"};// Vertices
+    vector<string> vertexNames = {"A", "B", "C", "D", "E"};// Vertices
     int V = vertexNames.size();
     vector<vector<int>> dist(V, vector<int>(V, INT_MAX));
 
     // graph
     dist[0][1] = 5;
-    dist[0][3] = 10;
-    dist[1][2] = 3;
-    dist[2][3] = 1;
+    dist[1][3] = 1;
+    dist[2][0] = 3;
+    dist[2][1] = 2;
+    dist[2][4] = -7;
+    dist[3][2] = 9;
+    dist[4][3] = 8;
 
     // Set diagonal elements to 0
     for (int i = 0; i < V; i++)
