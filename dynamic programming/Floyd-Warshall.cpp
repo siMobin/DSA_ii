@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void floydWarshall(vector<vector<int>>& dist, vector<string>& vertexNames)
+void floydWarshall(vector<vector<int>> &dist, vector<string> &vertexNames)
 {
     int V = dist.size();
 
@@ -25,7 +25,7 @@ void floydWarshall(vector<vector<int>>& dist, vector<string>& vertexNames)
 
 int main()
 {
-    vector<string> vertexNames = {"A", "B", "C", "D"};// Vertices
+    vector<string> vertexNames = {"A", "B", "C", "D"}; // Vertices
     int V = vertexNames.size();
     vector<vector<int>> dist(V, vector<int>(V, INT_MAX));
 
@@ -43,7 +43,8 @@ int main()
 
     floydWarshall(dist, vertexNames);
 
-    cout << "Shortest Distances between Vertices:" << endl<<endl;
+    cout << "Shortest Distances between Vertices:" << endl
+         << endl;
     for (int i = 0; i < V; i++)
     {
         cout << "\t(" << vertexNames[i] << ")";

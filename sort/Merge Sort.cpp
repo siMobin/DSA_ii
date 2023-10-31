@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void merge(vector<int>& arr, int left, int middle, int right)
+void merge(vector<int> &arr, int left, int middle, int right)
 {
     int n1 = middle - left + 1;
     int n2 = right - middle;
@@ -36,7 +36,7 @@ void merge(vector<int>& arr, int left, int middle, int right)
     }
 }
 
-void mergeSort(vector<int>& arr, int left, int right)
+void mergeSort(vector<int> &arr, int left, int right)
 {
     if (left < right)
     {
@@ -69,4 +69,3 @@ int main()
 
     return 0;
 }
-

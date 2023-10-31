@@ -6,7 +6,7 @@ using namespace std;
 
 class Graph
 {
-    int V; // Number of vertices
+    int V;                   // Number of vertices
     vector<vector<int>> adj; // Adjacency list
 
 public:
@@ -58,7 +58,7 @@ public:
 
 int main()
 {
-    Graph g(5); //graph vertices
+    Graph g(5); // graph vertices
 
     g.addEdge(0, 1);
     g.addEdge(0, 3);

@@ -1,37 +1,44 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 const int MAX_VERTICES = 100; // Maximum number of vertices in the graph
 
-class Graph {
+class Graph
+{
 private:
     int V;
     bool adjMatrix[MAX_VERTICES][MAX_VERTICES];
 
 public:
-    Graph(int V) : V(V) {
+    Graph(int V) : V(V)
+    {
         for (int i = 0; i < V; i++)
             for (int j = 0; j < V; j++)
                 adjMatrix[i][j] = false;
     }
 
-    void addEdge(int v, int w) {
+    void addEdge(int v, int w)
+    {
         adjMatrix[v][w] = true;
         adjMatrix[w][v] = true;
     }
 
-    void BFS(int source) {
+    void BFS(int source)
+    {
         bool visited[MAX_VERTICES] = {false};
         int queue[MAX_VERTICES], front = 0, rear = 0;
 
         visited[source] = true;
         queue[rear++] = source;
 
-        while (front < rear) {
+        while (front < rear)
+        {
             int currentVertex = queue[front++];
             cout << currentVertex << " ";
 
-            for (int neighbor = 0; neighbor < V; neighbor++) {
-                if (adjMatrix[currentVertex][neighbor] && !visited[neighbor]) {
+            for (int neighbor = 0; neighbor < V; neighbor++)
+            {
+                if (adjMatrix[currentVertex][neighbor] && !visited[neighbor])
+                {
                     visited[neighbor] = true;
                     queue[rear++] = neighbor;
                 }
@@ -40,7 +47,8 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     Graph g(6);
     g.addEdge(0, 1);
     g.addEdge(0, 2);

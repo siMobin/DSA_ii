@@ -21,47 +21,46 @@ A : array of items
 
 */
 
-
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,n,interval,lenght,outer,valuetoinsert,inner;
-    cout<<"enter size of array :";
-    cin>>n;
+    int i, n, interval, lenght, outer, valuetoinsert, inner;
+    cout << "enter size of array :";
+    cin >> n;
     int a[n];
-    for(i=0; i<n; i++)
-        cin>>a[i];
-    while(interval < n/3)
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+    while (interval < n / 3)
     {
-        interval = (interval *3)+1;
+        interval = (interval * 3) + 1;
     }
-    while(interval >0)
+    while (interval > 0)
     {
-        for(outer=interval; outer <n; outer ++)
+        for (outer = interval; outer < n; outer++)
         {
-            valuetoinsert=a[outer];
-            inner=outer;
-            while(inner > interval-1 && a[inner-interval] >= valuetoinsert)
+            valuetoinsert = a[outer];
+            inner = outer;
+            while (inner > interval - 1 && a[inner - interval] >= valuetoinsert)
             {
-                a[inner]=a[inner-interval];
-                inner=inner-interval;
+                a[inner] = a[inner - interval];
+                inner = inner - interval;
             }
-            a[inner]=valuetoinsert;
+            a[inner] = valuetoinsert;
 
-            for(i=0; i<n; i++)
+            for (i = 0; i < n; i++)
             {
-                cout<<a[i]<<" ";
+                cout << a[i] << " ";
             }
-            cout<<endl;
+            cout << endl;
         }
-        interval=(interval-1)/3;
+        interval = (interval - 1) / 3;
     }
-    for(i=0; i<n; i++)
+    for (i = 0; i < n; i++)
     {
-        cout<<a[i]<<" ";
+        cout << a[i] << " ";
     }
     return 0;
 }
 
-//shell sort
+// shell sort

@@ -28,7 +28,7 @@ public:
     }
 
     // Find the parent of a set using Union-Find
-    int findParent(vector<int>& parent, int node)
+    int findParent(vector<int> &parent, int node)
     {
         if (parent[node] == -1)
             return node;
@@ -36,7 +36,7 @@ public:
     }
 
     // Union of two sets using Union-Find
-    void unionSets(vector<int>& parent, int x, int y)
+    void unionSets(vector<int> &parent, int x, int y)
     {
         int xRoot = findParent(parent, x);
         int yRoot = findParent(parent, y);
@@ -50,10 +50,8 @@ public:
         vector<int> parent(V, -1);
 
         // Sort the edges in ascending order by weight
-        sort(edges.begin(), edges.end(), [](const Edge& a, const Edge& b)
-        {
-            return a.weight < b.weight;
-        });
+        sort(edges.begin(), edges.end(), [](const Edge &a, const Edge &b)
+             { return a.weight < b.weight; });
 
         int edgeCount = 0;
         for (Edge edge : edges)
@@ -74,7 +72,7 @@ public:
         }
 
         // Print the minimum spanning tree
-        cout<<"The minimum spanning tree ---> \n";
+        cout << "The minimum spanning tree ---> \n";
         for (Edge edge : result)
         {
             cout << edge.src << " - " << edge.dest << " : " << edge.weight << endl;
@@ -100,4 +98,3 @@ int main()
 
     return 0;
 }
-

@@ -11,7 +11,7 @@ struct Item
 };
 
 // Function to solve the 0/1 knapsack problem
-int knapsack(vector<Item>& items, int capacity)
+int knapsack(vector<Item> &items, int capacity)
 {
     int n = items.size();
     vector<vector<int>> dp(n + 1, vector<int>(capacity + 1, 0));
@@ -56,11 +56,11 @@ int knapsack(vector<Item>& items, int capacity)
 int main()
 {
     vector<Item> items =
-    {
-        {10, 60},
-        {20, 100},
-        {30, 120},
-    };
+        {
+            {10, 60},
+            {20, 100},
+            {30, 120},
+        };
 
     int capacity = 50;
 
